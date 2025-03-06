@@ -19,7 +19,7 @@ CREATE TABLE silver.crm_cust_info (
     cst_marital_status  NVARCHAR(50),
     cst_gndr            NVARCHAR(50),
     cst_create_date     DATE,
-	dwh_create_date     DATETIME DEFAULT GETDATE()
+    dwh_create_date     DATETIME DEFAULT GETDATE()
 );
 GO
 
@@ -36,7 +36,7 @@ CREATE TABLE silver.crm_prd_info (
     prd_line     NVARCHAR(50),
     prd_start_dt DATE,
     prd_end_dt   DATE,
-	dwh_create_date     DATETIME DEFAULT GETDATE()
+    dwh_create_date     DATETIME DEFAULT GETDATE()
 );
 GO
 
@@ -48,13 +48,13 @@ CREATE TABLE silver.crm_sales_details (
     sls_ord_num  NVARCHAR(50),
     sls_prd_key  NVARCHAR(50),
     sls_cust_id  INT,
-    sls_order_dt INT,
-    sls_ship_dt  INT,
-    sls_due_dt   INT,
+    sls_order_dt date,
+    sls_ship_dt  date,
+    sls_due_dt   date,
     sls_sales    INT,
     sls_quantity INT,
     sls_price    INT,
-	dwh_create_date     DATETIME DEFAULT GETDATE()
+    dwh_create_date     DATETIME DEFAULT GETDATE()
 );
 GO
 
